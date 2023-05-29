@@ -1,5 +1,3 @@
-package cz.cvut.fel.pjv.pageObjects;
-
 import cz.cvut.fel.pjv.pageObjects.lastChangesUpdate.AccountManager2;
 import cz.cvut.fel.pjv.pageObjects.loggingIn.MainPage;
 import cz.cvut.fel.pjv.pageObjects.renewingPreferences.AccountManager;
@@ -13,9 +11,8 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-public class TestAutomationStoreTests {
-
-// BEFORE LAUNCHING NEXT TEST, PLEASE PROPERLY CLOSE THE BROWSER WINDOW (or test will be implemented incorrectly)
+public class WikiTests {
+    // BEFORE LAUNCHING NEXT TEST, PLEASE PROPERLY CLOSE THE BROWSER WINDOW (or test will be implemented incorrectly)
     private static WebDriver driver;
     @BeforeAll
     public static void setUp() {
