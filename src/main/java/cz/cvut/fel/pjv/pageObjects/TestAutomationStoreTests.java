@@ -8,6 +8,8 @@ import cz.cvut.fel.pjv.pageObjects.surfingArticles.RecommendationsPage;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -28,20 +30,32 @@ public class TestAutomationStoreTests {
         }
     }
 
-    @Test
-    public void registrationTest() {
+    @ParameterizedTest
+    @CsvSource({"Seleniumtestcvut, hellotests, true"})
+    public void registrationTest(String name, String password, boolean isCorrect) {
         new MainPage(driver)
                 .openEShop()
                 .clickLogin()
-                .fillName("Seleniumtestcvut")
-                .fillPassword("hellotests")
+                .fillName(name)
+                .fillPassword(password)
                 .checkRememberMe()
+                .clickContinue();
+    }
+
+    @ParameterizedTest
+    @CsvSource({"Selenium, lol", "Test, kek", "Automation, cheburek"})
+    public void incorrectLoginTest(String name, String password) {
+        new MainPage(driver)
+                .openEShop()
+                .clickLogin()
+                .fillName(name)
+                .fillPassword(password)
                 .clickContinue();
     }
 
     @Test
     public void searchContentsTest() {
-        registrationTest();
+        registrationTest("Seleniumtestcvut", "hellotests", true);
         new RecommendationsPage(driver)
                 .tryContents()
                 .clickContent()
@@ -51,7 +65,7 @@ public class TestAutomationStoreTests {
 
     @Test
     public void changeNotificTest(){
-        registrationTest();
+        registrationTest("Seleniumtestcvut", "hellotests", true);
         new AccountManager(driver)
                 .openNotif()
                 .openPreferences()
@@ -62,7 +76,7 @@ public class TestAutomationStoreTests {
 
     @Test
     public void lastChangesUpdateTest(){
-        registrationTest();
+        registrationTest("Seleniumtestcvut", "hellotests", true);
         new AccountManager2(driver)
                 .openNotif()
                 .openPreferences()
@@ -75,11 +89,9 @@ public class TestAutomationStoreTests {
 
     @Test
     public void relocatingBetweenSearchesTest(){
-        registrationTest();
+        registrationTest("Seleniumtestcvut", "hellotests", true);
         new SearchPage(driver)
                 .typeSomething("quality assurance")
                 .clickSearch();
     }
-
-
 }

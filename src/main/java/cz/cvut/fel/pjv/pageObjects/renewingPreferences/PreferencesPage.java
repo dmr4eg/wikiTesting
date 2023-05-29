@@ -24,6 +24,11 @@ public class PreferencesPage {
     }
 
     public PreferencesPage clickChechbox(){
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOf(checkboxButton));
         checkboxButton.click();

@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class LastChangesPage {
     private WebDriver driver;
-    @FindBy(how = How.CSS, using = "#ooui-php-409")
+    @FindBy(how = How.CSS, using = "div[id='ooui-php-409'] span[class='oo-ui-labelElement-label']")
     private WebElement lastChangesButton;
 
     @FindBy(how = How.CSS, using = "#ooui-php-166")

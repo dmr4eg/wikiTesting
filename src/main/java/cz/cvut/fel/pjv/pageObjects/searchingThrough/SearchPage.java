@@ -12,10 +12,8 @@ import java.time.Duration;
 
 public class SearchPage {
     private WebDriver driver;
-    @FindBy(how = How.CSS, using = "#searchform > div > div > div.cdx-text-input.cdx-text-input--has-start-icon.cdx-text-input--status-default.cdx-search-input__text-input > input")
+    @FindBy(how = How.CSS, using = "#searchform")
     private WebElement textField;
-    @FindBy(how = How.CSS, using = "#searchform > div > button")
-    private WebElement searchButton;
 
     public SearchPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -30,14 +28,7 @@ public class SearchPage {
     }
 
     public SearchPage clickSearch() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.visibilityOf(searchButton));
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        searchButton.click();
+        textField.submit();
         return this;
     }
 
