@@ -1,7 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project description="" id="1" linkage="" name="proc1" version="">
     <graphs>
-        <graph description="" id="9" linkage="" name="New directed graph 1" type="ORIENTED_GRAPH" version=""/>
+        <graph description="" id="2" linkage="" name="New directed graph 1" type="ORIENTED_GRAPH" version="">
+            <node description="" height="25.0" id="2" name="START" priority="" style="STYLE_START" width="70.0" xpos="170.0" ypos="120.0"/>
+            <edge description="" id="4" name="1" priority="" source="2" target="3"/>
+            <node description="" height="40.0" id="3" name="A" priority="" style="STYLE_NODE" width="40.0" xpos="180.0" ypos="200.0"/>
+            <edge description="" id="6" name="2" priority="" source="3" target="5"/>
+            <node description="" height="40.0" id="5" name="B" priority="" style="STYLE_NODE" width="40.0" xpos="180.0" ypos="280.0"/>
+            <edge description="" id="11" name="3" priority="" source="5" target="7"/>
+            <node description="" height="40.0" id="7" name="C" priority="" style="STYLE_NODE" width="40.0" xpos="290.0" ypos="280.0"/>
+            <edge description="" id="12" name="4" priority="" source="7" target="5"/>
+            <edge description="" id="13" name="5" priority="" source="7" target="8"/>
+            <node description="" height="40.0" id="8" name="D" priority="" style="STYLE_NODE" width="40.0" xpos="290.0" ypos="370.0"/>
+            <edge description="" id="14" name="6" priority="" source="8" target="9"/>
+            <edge description="" id="15" name="7" priority="" source="8" target="10"/>
+            <node description="" height="40.0" id="9" name="E" priority="" style="STYLE_NODE" width="40.0" xpos="180.0" ypos="370.0"/>
+            <node description="" height="40.0" id="10" name="F" priority="" style="STYLE_NODE" width="40.0" xpos="290.0" ypos="460.0"/>
+            <edge description="" id="16" name="8" priority="" source="10" target="5"/>
+            <test_case changed="false" combinations_data_rows="5" graph_id="2" name="Test situations 1, TDL= 2, ALG= PCT." note="" test_situations_data_rows="2">
+                <combinations_data_value col="0" selected_row="0">B</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2 - 3
+4 - 3
+8 - 3
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">F</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">7 - 8
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">A</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">1 - 2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">C</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">3 - 4
+3 - 5
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">D</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">5 - 6
+5 - 7
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="4" name="1"/>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="11" name="3"/>
+                    <value edge_id="12" name="4"/>
+                    <value edge_id="11" name="3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="6"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="4" name="1"/>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="11" name="3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="15" name="7"/>
+                    <value edge_id="16" name="8"/>
+                    <value edge_id="11" name="3"/>
+                    <value edge_id="12" name="4"/>
+                    <value edge_id="11" name="3"/>
+                    <value edge_id="12" name="4"/>
+                    <value edge_id="11" name="3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="6"/>
+                </test_situation_row>
+            </test_case>
+        </graph>
     </graphs>
     <crud linkage="" version="">
         <description/>
