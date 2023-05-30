@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System name="REST pairwise testing">
+  <Parameters>
+    <Parameter id="0" name="HTTP_metoda" type="1">
+      <values>
+        <value>GET</value>
+        <value>POST</value>
+        <value>PUT</value>
+        <value>DELETE</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="1" name="Resource" type="1">
+      <values>
+        <value>/users</value>
+        <value>/products</value>
+        <value>/orders</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="2" name="Authentication" type="1">
+      <values>
+        <value>Yes</value>
+        <value>No</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="3" name="Parameters" type="1">
+      <values>
+        <value>Yes</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+  </Parameters>
+  <OutputParameters />
+  <Relations />
+  <Constraints />
+  <Testset doi="2">
+    <Testcase TCNo="0">
+      <Value>1</Value>
+      <Value>GET</Value>
+      <Value>/users</Value>
+      <Value>No</Value>
+      <Value>Yes</Value>
+    </Testcase>
+    <Testcase TCNo="1">
+      <Value>2</Value>
+      <Value>GET</Value>
+      <Value>/products</Value>
+      <Value>Yes</Value>
+      <Value>Yes</Value>
+    </Testcase>
+    <Testcase TCNo="2">
+      <Value>3</Value>
+      <Value>GET</Value>
+      <Value>/orders</Value>
+      <Value>No</Value>
+      <Value>Yes</Value>
+    </Testcase>
+    <Testcase TCNo="3">
+      <Value>4</Value>
+      <Value>POST</Value>
+      <Value>/users</Value>
+      <Value>Yes</Value>
+      <Value>Yes</Value>
+    </Testcase>
+    <Testcase TCNo="4">
+      <Value>5</Value>
+      <Value>POST</Value>
+      <Value>/products</Value>
+      <Value>No</Value>
+      <Value>Yes</Value>
+    </Testcase>
+    <Testcase TCNo="5">
+      <Value>6</Value>
+      <Value>POST</Value>
+      <Value>/orders</Value>
+      <Value>Yes</Value>
+      <Value>Yes</Value>
+    </Testcase>
+    <Testcase TCNo="6">
+      <Value>7</Value>
+      <Value>PUT</Value>
+      <Value>/users</Value>
+      <Value>No</Value>
+      <Value>Yes</Value>
+    </Testcase>
+    <Testcase TCNo="7">
+      <Value>8</Value>
+      <Value>PUT</Value>
+      <Value>/products</Value>
+      <Value>Yes</Value>
+      <Value>Yes</Value>
+    </Testcase>
+    <Testcase TCNo="8">
+      <Value>9</Value>
+      <Value>PUT</Value>
+      <Value>/orders</Value>
+      <Value>No</Value>
+      <Value>Yes</Value>
+    </Testcase>
+    <Testcase TCNo="9">
+      <Value>10</Value>
+      <Value>DELETE</Value>
+      <Value>/users</Value>
+      <Value>No</Value>
+      <Value>Yes</Value>
+    </Testcase>
+    <Testcase TCNo="10">
+      <Value>11</Value>
+      <Value>DELETE</Value>
+      <Value>/products</Value>
+      <Value>Yes</Value>
+      <Value>Yes</Value>
+    </Testcase>
+    <Testcase TCNo="11">
+      <Value>12</Value>
+      <Value>DELETE</Value>
+      <Value>/orders</Value>
+      <Value>No</Value>
+      <Value>Yes</Value>
+    </Testcase>
+  </Testset>
+  <Header>
+    <Value />
+    <Value>HTTP_metoda</Value>
+    <Value>Resource</Value>
+    <Value>Authentication</Value>
+    <Value>Parameters</Value>
+  </Header>
+  <Graph-Data>
+    <Value>0.17142858</Value>
+    <Value>0.31428573</Value>
+    <Value>0.4</Value>
+    <Value>0.51428574</Value>
+    <Value>0.6</Value>
+    <Value>0.6571429</Value>
+    <Value>0.74285716</Value>
+    <Value>0.8</Value>
+    <Value>0.82857144</Value>
+    <Value>0.9142857</Value>
+    <Value>0.9714286</Value>
+    <Value>1.0</Value>
+  </Graph-Data>
+  <Stat-Data>
+    <ExecutionTime>0.013</ExecutionTime>
+    <MaxDomainSize>4</MaxDomainSize>
+    <MinDomainSize>1</MinDomainSize>
+    <TotalNoOfCombination>35</TotalNoOfCombination>
+    <TotalNoOfTests>12</TotalNoOfTests>
+    <Algorithm>IPOG</Algorithm>
+  </Stat-Data>
+</System>
+

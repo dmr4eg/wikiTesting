@@ -1,0 +1,19 @@
+# ACTS Test Suite Generation: Tue May 30 12:49:58 CEST 2023
+#  '*' represents don't care value 
+# Degree of interaction coverage: 2
+# Number of parameters: 4
+# Maximum number of values per parameter: 4
+# Number of configurations: 12
+HTTP_metoda,Resource,Authentication,Parameters
+GET,/users,No,Yes
+GET,/products,Yes,Yes
+GET,/orders,No,Yes
+POST,/users,Yes,Yes
+POST,/products,No,Yes
+POST,/orders,Yes,Yes
+PUT,/users,No,Yes
+PUT,/products,Yes,Yes
+PUT,/orders,No,Yes
+DELETE,/users,No,Yes
+DELETE,/products,Yes,Yes
+DELETE,/orders,No,Yes
